@@ -7,15 +7,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/nav/nav.jsx";
 import Admin from "./components/main/Admin.jsx";
 import Mails from "./components/main/Mails.jsx";
+import Home from "./components/main/home-layout/Home.jsx";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-      <Nav />
+        <Nav />
         <Routes>
-          <Route path="Admin" element={<Admin/>}/>
-          <Route path="Mails" element={<Mails/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/Admin" element={<Admin />} />
+          <Route path="/Mails" element={<Mails />} />
         </Routes>
       </BrowserRouter>
     </>

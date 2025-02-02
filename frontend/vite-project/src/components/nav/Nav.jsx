@@ -7,14 +7,15 @@ import { Link } from "react-router-dom";
 // main layout
 import Admin from "../main/Admin";
 import Mails from "../main/Mails";
+import Home from "../main/home-layout/Home";
 export const Nav = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             Brand
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,22 +26,27 @@ export const Nav = () => {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>{/* ทำปุ่ม แฮมเบอร์เกอร์ */}
+          </button>
+          {/* ทำปุ่ม แฮมเบอร์เกอร์ */}
           {/* แทบ nav id= navbarNav เพราะ ตั้ง data-bs-target="#navbarNav"*/}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active " aria-current="page">
+                <Link
+                  className="nav-link active "
+                  aria-current="page"
+                  to="/"
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="Mails">
+                <Link className="nav-link" to="/Mails">
                   จดหมาย
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link" to="Admin">
+                <Link className="nav-link" to="/Admin">
                   จัดการจดหมาย
                 </Link>
               </li>
