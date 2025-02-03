@@ -18,8 +18,7 @@ app.use(bodyParser.json()); // body-parser ให้รับเป็น json
 initMysql()
 
 // ใช้งาน routes
-app.use('/show', routes);
-app.use('/create', routes);
+app.use('/', routes);
 
 app.listen(port, (req, res) => {
   console.log(`Server is running on port ${host}${port}`);
