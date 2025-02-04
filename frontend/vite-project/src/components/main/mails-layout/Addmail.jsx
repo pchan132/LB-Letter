@@ -34,6 +34,8 @@ const AddMail = () => {
           status: results.data.status,
         },
       ]);
+      // แสดงใน console สักหน่อย !!!
+      console.log("New mail added successfully", results.data);
     } catch (err) {
       console.error(err);
       console.error("Error adding mail", err);
@@ -92,9 +94,7 @@ const AddMail = () => {
               placeholder="วันที่ส่ง"
               className="border p-2 m-2"
               value={sent_date}
-              onChange={(event) => {
-                setSentDate(event.target.value); // ใช้ event.target.value
-              }}
+              onChange={(event) => setSentDate(event.target.value)}
             />
             <select
               name="status"
