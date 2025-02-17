@@ -4,11 +4,12 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../../node_modules/bootstrap/dist/js/bootstrap";
 
 
-export const Mail = () => {
+export const Mails = () => {
   return (
     <>
+    
     </>
   );
 };
 
-export default Mail;
+export default Mails;
